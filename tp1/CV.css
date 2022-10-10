@@ -1,94 +1,125 @@
-/*Crée le : 9 mars 2018, 11:30:50Auteur: Rue de l'info*/
- 
-@media screen {
-	html,
-	body {
-		/*width:1050px; /* base de test et de mesures */
-		margin: .75em 1%;
-		/* 12px/16px 12px/1050px*/
-		font-family: Arial, Helvetica, sans-serif;
-		/* font-size : 16px;/* pour test ==> défini dans chaque media query */
-	}
-	/* titre */
-	body>header {
-		font-size: 4em;
-		font-weight: bold;
-		color: blue;
-		margin-bottom: 1em;
-		/*50px/3em;*/
-	}
-	/* titres du bloc main */
-	#formation>header,
-	#expe>header {
-		font-size: 2em;
-		/* 32 px */
-		margin: 0.625em0px;
-		/* 20px/32px */
-		padding: 0.7%;
-		/*5px/706px */
-		font-weight: bold;
-		color: white;
-		background-color: green;
-	}
-	/* titre et bloc main à gauche */
-	/* DEPLACE DANS LE fichier cvpc.cssbody>header, main{display: block;float:left;width:73% ; /* 750px/1026px */
-	/*}*/
-	/* diplômes */
-	#formation table th {
-		text-align: left;
-		font-size: 1.2em;
-	}
-	/* espaces entre 2 formations */
-	#formation table tr:nth-child(2n) td {
-		padding-bottom: 1em;
-		/* 16px */
-	}
-	/* bloc photo + adresseet divers */
-	/* DEPLACE DANS LE fichier cvpc.css#civil, #divers {float:right;width: 24%;background-color: blue;color:white;padding: .5em0.8% ;}*/
-	/* pas de triangles pour détails à la demande */
-	/* DEPLACE DANS LE fichier cvpc.css#expe h1>img, #divers h2>img {display:none;}*/
-	/* CIVIL------------------------------------- */
-	/* photo identité */
-	#civil>img {
-		display: block;
-		margin: auto;
-		border: 3px solid white;
-		border-radius: 5px;
-	}
-	/* adresse de la personne */
-	#civil p {
-		margin: 0.3em 0px;
-		/* 5px/16px 0px; */
-	}
-	/* EXPERIENCE ------------------------------------- */
-	/* énum en expériences prof */
-	#expe h1 {
-		font-size: 1.2em;
-		background-color: #11b7ee;
-		font-weight: normal;
-	}
-	/* séparation en 2 parties de l'expé prof */
-	#expe h1 span:first-of-type {
-		display: inline-block;
-		/* nécessaire pour dimensionner */
-		word-wrap: break-word;
-		width: 40%;
-		/* espacer les 2 parties */
-	}
-	#expe ul {
-		margin-left: 13%;
-		/*100px/750px;*/
-	}
-	/* DIVERS ----------------------------------------- */
-	/* titres et enum en divers */
-	#divers>h2 {
-		background-color: white;
-		color: blue;
-		padding: 2%;
-		/*5px/234px */
-	}
-	#divers ul {
-		list-style: none;
-		padding-left: 0px;
-	}
-}
+*{
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.5;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #4438f1;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  p{
+    margin: 0 0 1rem;
+  }
+  
+  h1{
+    margin: 0 0 1rem;
+    font-size: 2.5rem;
+    margin-bottom: .5rem;
+  }
+  
+  h2{
+    margin: 0 0 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  .text-blue{
+    color: #3161f1;
+  }
+  
+  .text-darkblue{
+    color: #24075f;
+  }
+  
+  .text-uppercase{
+    text-transform: uppercase; 
+  }
+  
+  .icon{
+    margin-right: .5rem;
+  }
+  
+  .cv-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left-column right-column right-column";
+    width: 1200px;
+    margin: 100px auto;
+    box-shadow: 0 1px 3px rgba(12, 168, 90, 0.12), 0 1px 2px rgba(38, 216, 106, 0.24);
+  }
+  
+  .section{
+    margin-bottom: 1.5rem;
+  }
+  
+  /* LEFT COLUMN */
+  .left-column{
+    grid-area: left-column;
+    padding: 50px;
+    background-color: #3917fa;
+    color: white;
+  }
+  
+  .portait{
+    border-radius: 50%;
+    max-width: 150px;
+    margin: auto;
+    display: block;
+    margin-bottom: 50px;
+  }
+  
+  .skills{
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin: 0 0 1rem;
+  }
+  
+  /* RIGHT COLUMN */
+  .right-column{
+    grid-area: right-column;
+    display: grid;
+    grid-template-rows: 250px 1fr;
+    grid-template-areas: 
+      "header"
+      "content";
+  }
+  
+  /* HEADER */
+  .header{
+    grid-area: header;
+    padding: 50px;
+    background-color: #99bfea;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .infos{
+    columns: 2;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* CONTENT */
+  .content{
+    grid-area: content;
+    padding: 50px;
+  }
+  
+  .experience-list{
+    list-style-type: circle;
+  }
