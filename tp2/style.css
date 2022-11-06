@@ -1,0 +1,17 @@
+label{
+    
+    width: 150px;
+    float: left;
+}
+#error  {
+    display: none;
+     background-color: pink;
+     padding: 5px;
+     border: 1px black solid;
+ }
+ #resultat {
+  display: none;
+  background-color: green;
+  padding: 5px;
+  color: white;
+ }
