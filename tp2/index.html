@@ -1,27 +1,121 @@
 <!DOCTYPE html>
+
 <html>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="fonction.js"></script>
-<body>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>TP2</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <!-- <link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+
+  <!-- Place favicon.ico in the root directory -->
+
+
+
+  <style>
+    body {
+
+      background-color:
+        hsla(198,
+          48%, 95%,
+          0.817);
+
+      font-family:
+        system, -apple-system, ".SFNSText-Regular",
+        "San Francisco",
+        "Roboto", "Segoe UI",
+        "Helvetica Neue", "Lucida Grande",
+        sans-serif;
+
+      font-size:
+        16px;
+
+      margin:
+        0 auto;
+
+      max-width:
+        800px;
+
+    }
+  </style>
+
+
+  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <!--<script src="js/main.js"></script>-->
+
 </head>
-<h1>Saisie d'une fiche "Personne"</h1>
-<form name="myForm" >
-  <label for="fname">Nom</label><input type= "text" id="fname" name="fname"> <br>
-  <label for="lname">Prénom</label><input type="text" id="lname" name="lname" ><br>
-  <label for="dateNaissance"> Date de naissance </label><input type="date" placeholder="JJ/MM/AAAA" name="dateNaissance" ><br>
-  <label for="adresse">Adresse</label><input type="text" name="adresse" ><br>
-  <label for="mail">Mail</label><input type="email" name="mail"><br><br>
- </form>
-  <input type="button" value="Valider" onclick="Validation()"/>
 
-  
-  <div id="error"  onclick="button" > </div>
-  <div id="resultat" onclick="button"></div>
+<body>
+
+  <h1>TP#2</h1>
+
+  <form action="action.html" method="get">
+
+    <label for="name"> Nom</label>
+
+    <input type="text" id="name" name="name" required minlength="2" maxlength="20">
+
+    <span class="icon-ok">✔</span>
+
+    <br>
+
+
+    <label for="prénom">prénom</label>
+
+    <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="20">
+
+    <span class="icon-ok">✔</span>
+
+    <br>
+
+
+
+    <label for="Date de naissance">Date de naissance</label>
+
+    <input type="date" id="birthday" name="birthday" required>
+
+    <span class="icon-ok">✔</span>
+
+    <br>
+
+
+    <label for="Adresse">Adresse</label>
+
+    <input type="text" id="address" name="address" required minlength="5" maxlength="50">
+
+    <span class="icon-ok">✔</span>
+
+    <br>
+
+
+    <label for="Email"> Email</label>
+
+    <input type="email" id="email" name="email" required minlength="5" maxlength="30">
+
+    <span class="icon-ok">✔</span>
+
+    <br>
+
+    <input class="btn-primary" type="submit" value="Envoyer">
+
+
+  </form>
+
+
+
 </body>
-</html>
 
+</html>
