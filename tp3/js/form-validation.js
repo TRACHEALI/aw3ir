@@ -17,7 +17,7 @@ let msg;
 
 let mtn = new Date ();
 
-let m = new Date ( document.querySelector("#Date".value));
+let m = new Date ( document.querySelector("#Date").value);
 
 if (m > mtn){
   msg = false;
@@ -54,7 +54,7 @@ function test(){
   
   
     document.querySelector(".modal-title").textContent = " Bienvenue " + n + " "+ p ;
-    document.querySelector(".modal-body").innerHTML = `Vous êtes né le ${ma} et vous habitez à <a href= 'https://maps.google.com/maps?q=${a}'> <img style="max-width: 100%" src='https://maps.googleapis.com/maps/api/staticmap?markers=${a}&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg' > ${a}</a>`;
+    document.querySelector(".modal-body").innerHTML = `Vous êtes né le ${ma} et vous habitez à <a href= 'https://maps.google.com/maps?q=${a}'> <img  src='https://maps.googleapis.com/maps/api/staticmap?markers=${a}&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg' > ${a}</a>`;
 
     myModal.show();
   }
