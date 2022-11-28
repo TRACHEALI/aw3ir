@@ -1,7 +1,10 @@
 
+
 function calcNbChar(id) {
   document.querySelector(`#${id} + span`).textContent = document.querySelector(`#${id}`).value.length;
 }
+
+
 
 
 function validateEmail(email) {
@@ -16,9 +19,7 @@ function validateEmail(email) {
 
 //  x.querySelector(".container").innerHTML = "Hello World!";
 
-
-
-
+   
     
 function testDate (){
 let msg;
@@ -33,7 +34,6 @@ if (m > mtn){
   msg= true;
 }
 return msg ;
-   
 
 }
 function test(){
@@ -58,14 +58,22 @@ function test(){
     myModal.show();
   } else {
     
-    adr = document.getElementById("Adresse").value;
-    
-  
-  
-    document.querySelector(".modal-title").textContent = " Bienvenue " + n + " "+ p ;
-    document.querySelector(".modal-body").innerHTML = `Vous êtes né le ${ma} et vous habitez à <a href= 'https://maps.google.com/maps?q=${a}'> <img  src='https://maps.googleapis.com/maps/api/staticmap?markers=${a}&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg' > ${a}</a>`;
+    contactStore.add(n,p,a,e,ma);
+    contactStore.showList();
 
-    myModal.show();
+  document.querySelector("table tbody").innerHTML =
+  document.querySelector("table tbody").innerHTML +
+  `
+  <tr>
+  <td> ${n} </td>
+  <td>${p} </tr>
+  <td>${ma}</td>
+  <td><a href='http://maps.google.com/maps?q=${a}</td>
+  <td>< href='mailto:${e}</td>
+  </tr> `;
+// CODE à compléter pour insérer les autres données
+  
+   
   }
   
 
