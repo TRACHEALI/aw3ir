@@ -52,15 +52,15 @@
       <div class="row mb-3">
         <label for="Date" class="col-sm-2 col-form-label">Date de naissance</label>
         <div class="col-sm-10">
-          <input type="date" class="form-control" id="Date" placeholder="JJ/MM/AAAA" name="Date"
-            />
+          <input type="date" class="form-control" id="Date" placeholder="JJ/MM/AAAA" name="Date"/>
+            
         </div>
       </div>
       <div class="row mb-3">
-        <label for="Adresse" class="col-sm-2 col-form-label">Adresse</label>
+        <label for="Adresse" class="col-sm-2 col-form-label">Adresse </label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="Adresse" placeholder="Entrez l'adresse" name="Adresse"
-             />
+          <input type="text" class="form-control" id="Adresse" placeholder="Entrez l'adresse" name="Adresse" onkeypress="calcNbChar(this.id)" />
+             
           <button type="button" class="btn btn-primary" id="button1" onclick="getLocation()">GPS</button>
           <div id="map"></div>
 
@@ -71,7 +71,7 @@
       <div class="row mb-3">
         <label for="email" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
-          <input type="email" class="form-control" id="email" name="email" />
+          <input type="email" class="form-control" id="email" name="email" onkeypress="calcNbChar(this.id)" />
         </div>
       </div>
       <button type="button" class=" btn btn-primary" onclick="test()"> Validez</button>
